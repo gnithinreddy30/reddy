@@ -21,7 +21,8 @@ import nltk
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer
-
+workers = 1
+threads = 1
 # Configure Tesseract
 pytesseract.pytesseract.tesseract_cmd = os.getenv('TESSERACT_PATH', '/usr/bin/tesseract')
 nltk.download('punkt', quiet=True)
